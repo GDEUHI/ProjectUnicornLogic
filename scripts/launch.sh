@@ -1,13 +1,16 @@
 #!/bin/bash
 
-DAY=$1
-EXO=$2
+echo
+echo "🦄 Merci $NAME, lancement de $DAY / $EXO..."
 
-FILE="src/UnicornLogic/${DAY}_UnicornChapter/${EXO^}.cs"
+# 🧠 Normalize and find the right file, ignoring case
+EXO_UPPER="$(echo "$EXO" | sed -E 's/^([a-z])/\U\1/')"
+FILE="src/UnicornLogic/${DAY}_UnicornChapter/${EXO_UPPER}.cs"
 
 if [[ -f "$FILE" ]]; then
-    echo "🦄✨ Exécution de ${FILE}..."
-    dotnet run --project src/UnicornLogic --configuration Release
+  echo "✅ Fichier trouvé : $FILE"
+  echo "🚀 Exécution en cours..."
+  dotnet run --project src/UnicornLogic --configuration Release
 else
-    echo "❌ Fichier ${FILE} introuvable."
+  echo "❌ Fichier $FILE introuvable."
 fi

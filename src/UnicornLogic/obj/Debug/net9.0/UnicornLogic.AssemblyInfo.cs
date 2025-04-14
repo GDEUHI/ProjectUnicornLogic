@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UnicornLogic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+341074acae51ed14b879f3e33aa3e3e800f2e848")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnicornLogic")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnicornLogic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
