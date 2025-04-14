@@ -4,6 +4,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        UnicornLogic._UnicornChapter..Run();
+        UnicornLogic.Day06_UnicornChapter.Exo01.Run();
     }
 }
