@@ -1,16 +1,32 @@
-#!/bin/bash
+#!/bin/zsh
 
-echo
-echo "🦄 Merci $NAME, lancement de $DAY / $EXO..."
+clear
+echo "╔════════════════════════════════════════════════════╗"
+echo "║ 🌈🦄   BIENVENUE DANS UNICORNLAND: LOGIC MODE   🦄🌈 ║"
+echo "╚════════════════════════════════════════════════════╝"
 
-# 🧠 Normalize and find the right file, ignoring case
-EXO_UPPER="$(echo "$EXO" | sed -E 's/^([a-z])/\U\1/')"
-FILE="src/UnicornLogic/${DAY}_UnicornChapter/${EXO_UPPER}.cs"
+read "NAME?Quel est ton prénom ? "
+read "DAY?Jour ? (ex: day06) : "
+read "EXO?Exo ? (ex: exo2) : "
 
-if [[ -f "$FILE" ]]; then
-  echo "✅ Fichier trouvé : $FILE"
-  echo "🚀 Exécution en cours..."
-  dotnet run --project src/UnicornLogic --configuration Release
-else
-  echo "❌ Fichier $FILE introuvable."
-fi
+DAY_PASCAL="Day${DAY#day}"
+EXO_PASCAL="Exo${EXO#exo}"
+
+EXO_PATH="UnicornLogic.${DAY_PASCAL}_UnicornChapter.${EXO_PASCAL}"
+
+echo "✅ Updating Program.cs to run: ${EXO_PATH}"
+
+cat <<EOF > ~/ProjectUnicornLogic/src/UnicornLogic/Program.cs
+namespace UnicornLogic;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        ${EXO_PATH}.Run();
+    }
+}
+EOF
+
+echo "🚀 Launching..."
+dotnet run --project ~/ProjectUnicornLogic/src/UnicornLogic --configuration Release

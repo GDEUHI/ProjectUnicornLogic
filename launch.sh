@@ -1,37 +1,41 @@
-#!/bin/bash
+#!/bin/zsh
 
-# 🦄 launch.sh – Magical unicorn day/exo runner
-DAY=$1
-EXO=$2
+clear
+echo "╔════════════════════════════════════════════════════╗"
+echo "║ 🌈🦄   BIENVENUE DANS UNICORNLAND: LOGIC MODE   🦄🌈 ║"
+echo "╚════════════════════════════════════════════════════╝"
 
-if [ -z "$DAY" ] || [ -z "$EXO" ]; then
-  echo "❌ Usage: ./launch.sh dayXX exoX"
-  echo "✅ Example: ./launch.sh day07 exo3"
-  exit 1
-fi
+read "NAME?Quel est ton prénom ?"
+read "DAY?Jour ? (ex: day06) :"
+read "EXO?Exo ? (ex: exo2) :"
 
-EXO_UPPER=$(echo "$EXO" | tr '[:lower:]' '[:upper:]')
-DAY_CLASS="UnicornLogic.${DAY^}_UnicornChapter.${EXO_UPPER}"
+echo ""
+echo "🦄 Merci $NAME, lancement de $DAY / $EXO..."
 
-echo "✨ Switching Program.cs to → $DAY_CLASS.Run();"
+# Make sure casing is correct
+DAY_CAMEL="${DAY:l}"
+EXO_CAMEL="${EXO:l}"
+DAY_PASCAL="${DAY:u}"
+EXO_PASCAL="$(echo "$EXO_CAMEL" | sed -E 's/(exo)([0-9]+)/\U\1\2/')"
 
-cat > src/UnicornLogic/Program.cs <<EOF
-﻿namespace UnicornLogic;
+# Construct path
+EXO_PATH="UnicornLogic.${DAY_PASCAL}_UnicornChapter.${EXO_PASCAL}"
+
+# Update Program.cs automatically
+cat > ~/ProjectUnicornLogic/src/UnicornLogic/Program.cs <<EOF
+namespace UnicornLogic;
 
 class Program
 {
     static void Main(string[] args)
     {
-        $DAY_CLASS.Run();
+        $EXO_PATH.Run();
     }
 }
 EOF
 
-# OPTIONAL: open the exercise in code
-echo "🦄 Opening file: src/UnicornLogic/${DAY^}_UnicornChapter/${EXO_UPPER}.cs"
-code "src/UnicornLogic/${DAY^}_UnicornChapter/${EXO_UPPER}.cs"
+# Confirm update
+echo "✅ Program.cs updated to run: $EXO_PATH"
 
-# Run the project
-echo "🚀 Running Unicorn Logic!"
-dotnet run --project src/UnicornLogic
-
+# Attempt to run
+dotnet run --project ~/ProjectUnicornLogic/src/UnicornLogic --configuration Release

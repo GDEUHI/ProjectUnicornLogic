@@ -13,8 +13,34 @@ public static class Exo1
         Console.WriteLine("╚══════════════════════════════════════════════╝");
         Console.ResetColor();
         Console.WriteLine();
-        #endregion
+        // (Removed the unmatched #endregion directive)
 
-        // 👉 Code à écrire ici
+        // 👉 #region 🌈🦄 PROJECT UNICORN LOGIC – JOUR 06 EXO 1 ✨
+Console.ForegroundColor = ConsoleColor.Magenta;
+Console.WriteLine("╔════════════════════════════════════════════════╗");
+Console.ForegroundColor = ConsoleColor.Cyan;
+Console.WriteLine("║     🦄 JOUR 06 – EXO 1 : TABLEAU 6 ENTIERS     ║");
+Console.ForegroundColor = ConsoleColor.Magenta;
+Console.WriteLine("╚════════════════════════════════════════════════╝");
+Console.ResetColor();
+Console.WriteLine();
+
+
+        int[] nombres = new int[6];
+
+for (int i = 0; i < 6; i++)
+{
+    Console.Write($"Entrez le nombre #{i + 1} : ");
+    nombres[i] = int.Parse(Console.ReadLine());
+}
+
+Console.WriteLine("\n📦 Vous avez saisi les nombres suivants :");
+foreach (int n in nombres)
+{
+    Console.WriteLine($"🌟 {n}");
+}
+
+// ALTERNATE : Impression rapide avec Join()
+// Console.WriteLine("🌈 [Alternative] " + string.Join(", ", nombres));
     }
 }
