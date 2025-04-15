@@ -19,14 +19,11 @@ echo "✅ Updating Program.cs to run: ${EXO_PATH}"
 cat <<EOF > ~/ProjectUnicornLogic/src/UnicornLogic/Program.cs
 namespace UnicornLogic;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
         ${EXO_PATH}.Run();
     }
 }
 EOF
-
-echo "🚀 Launching..."
-dotnet run --project ~/ProjectUnicornLogic/src/UnicornLogic --configuration Release

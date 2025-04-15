@@ -42,5 +42,6 @@
 //         double moyenneAlt = scores.Average();
 //         Console.WriteLine($"[Alternative] Moyenne avec LINQ : {moyenneAlt}");
 //         */
+//         #region 🌈🦄 PROJECT UNICORN LOGIC – JOUR 01 EXO 2 ✨
 //     }
 // }

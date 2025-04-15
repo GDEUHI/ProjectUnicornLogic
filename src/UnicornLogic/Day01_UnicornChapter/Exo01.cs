@@ -1,25 +1,20 @@
-namespace UnicornLogic.Day06_UnicornChapter;
+namespace UnicornLogic.Day01_UnicornChapter;
 
-public static class Exo4
+public static class Exo1
 {
     public static void Run()
     {
-        #region 🌈🦄 PROJECT UNICORN LOGIC – JOUR 06 EXO 4 ✨
+        #region 🌈🦄 PROJECT UNICORN LOGIC – JOUR 06 EXO 01 ✨
         Console.ForegroundColor = ConsoleColor.Magenta;
         Console.WriteLine("╔══════════════════════════════════════════════╗");
         Console.ForegroundColor = ConsoleColor.Cyan;
-        Console.WriteLine("║  🦄 PROJECT UNICORN LOGIC – JOUR 06 EXO 4  ║");
+        Console.WriteLine("║  🦄 PROJECT UNICORN LOGIC – JOUR 06 EXO 01 ║");
         Console.ForegroundColor = ConsoleColor.Magenta;
         Console.WriteLine("╚══════════════════════════════════════════════╝");
         Console.ResetColor();
         Console.WriteLine();
         #endregion
 
-        // 🧠 Ton code ici...
-
-        // 🌟 ALTERNATIVE :
-        /*
-        // Code plus avancé (niveau supérieur)
-        */
+        // 👉 Code à écrire ici
     }
 }

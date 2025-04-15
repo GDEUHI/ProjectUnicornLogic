@@ -28,7 +28,7 @@ public static class Exo1
         Console.WriteLine();
         #endregion
 
-        #region 
+        #region 🚀 LOGIC
         int[] nombres = new int[6];
 
         for (int i = 0; i < nombres.Length; i++)

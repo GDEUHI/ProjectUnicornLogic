@@ -1,9 +1,9 @@
 namespace UnicornLogic;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
-        UnicornLogic.Day06_UnicornChapter.Exo01.Run();
+        UnicornLogic.Day06_UnicornChapter.Exo04.Run();
     }
 }

@@ -22,6 +22,7 @@ EXO_PASCAL="$(echo "$EXO_CAMEL" | sed -E 's/(exo)([0-9]+)/\U\1\2/')"
 EXO_PATH="UnicornLogic.${DAY_PASCAL}_UnicornChapter.${EXO_PASCAL}"
 
 # Update Program.cs automatically
+# Inject dispatcher call with variables
 cat > ~/ProjectUnicornLogic/src/UnicornLogic/Program.cs <<EOF
 namespace UnicornLogic;
 
@@ -29,7 +30,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        $EXO_PATH.Run();
+        UnicornDispatcher.Run("${DAY#day}", "${EXO#exo}");
     }
 }
 EOF

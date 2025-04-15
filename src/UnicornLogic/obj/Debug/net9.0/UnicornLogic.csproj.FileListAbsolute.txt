@@ -1,0 +1,15 @@
+/Users/gd/ProjectUnicornLogic/src/UnicornLogic/obj/Debug/net9.0/UnicornLogic.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gd/ProjectUnicornLogic/src/UnicornLogic/obj/Debug/net9.0/UnicornLogic.AssemblyInfoInputs.cache
+/Users/gd/ProjectUnicornLogic/src/UnicornLogic/obj/Debug/net9.0/UnicornLogic.AssemblyInfo.cs
+/Users/gd/ProjectUnicornLogic/src/UnicornLogic/obj/Debug/net9.0/UnicornLogic.csproj.CoreCompileInputs.cache
+/Users/gd/ProjectUnicornLogic/src/UnicornLogic/obj/Debug/net9.0/UnicornLogic.sourcelink.json
+/Users/gd/ProjectUnicornLogic/src/UnicornLogic/bin/Debug/net9.0/UnicornLogic
+/Users/gd/ProjectUnicornLogic/src/UnicornLogic/bin/Debug/net9.0/UnicornLogic.deps.json
+/Users/gd/ProjectUnicornLogic/src/UnicornLogic/bin/Debug/net9.0/UnicornLogic.runtimeconfig.json
+/Users/gd/ProjectUnicornLogic/src/UnicornLogic/bin/Debug/net9.0/UnicornLogic.dll
+/Users/gd/ProjectUnicornLogic/src/UnicornLogic/bin/Debug/net9.0/UnicornLogic.pdb
+/Users/gd/ProjectUnicornLogic/src/UnicornLogic/obj/Debug/net9.0/UnicornLogic.dll
+/Users/gd/ProjectUnicornLogic/src/UnicornLogic/obj/Debug/net9.0/refint/UnicornLogic.dll
+/Users/gd/ProjectUnicornLogic/src/UnicornLogic/obj/Debug/net9.0/UnicornLogic.pdb
+/Users/gd/ProjectUnicornLogic/src/UnicornLogic/obj/Debug/net9.0/UnicornLogic.genruntimeconfig.cache
+/Users/gd/ProjectUnicornLogic/src/UnicornLogic/obj/Debug/net9.0/ref/UnicornLogic.dll
