@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 # ProjectUnicornLogic
 >>>>>>> 1c3b6ff2f6141f4ddf1714daa7d3595355956d44
 # 🦄 Project Unicorn Logic
